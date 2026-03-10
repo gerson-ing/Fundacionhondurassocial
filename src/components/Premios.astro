@@ -1,0 +1,37 @@
+---
+const premios = [
+	{ nombre: 'Premio Global Resiliency Fund', entidad: 'International Youth Foundation, N. Conrad Hilton, Burberry (USA)', anio: 2021 },
+	{ nombre: 'Finalista Premio Mujeres Adelante', entidad: 'Banco Ficohsa', anio: 2021 },
+	{ nombre: 'Premios Indio Lempira a la Excelencia', entidad: 'Comunidad hondureña migrante en Barcelona', anio: 2019 },
+	{ nombre: 'Reconocimiento Agente de Cambio', entidad: 'JCI San Pedro Sula', anio: 2018 },
+	{ nombre: 'Premio Voces Vitales — Mujeres Transformando Honduras', entidad: 'Voces Vitales', anio: 2018 },
+	{ nombre: 'Premio Quetglas', entidad: 'Un premio a la caridad hecha persona', anio: 2018 },
+	{ nombre: 'Premio Honduras Innova', entidad: 'Gobierno de Honduras, UTH', anio: 2017 },
+	{ nombre: 'Premio Reto Emprendedor', entidad: 'Centromype, SICA, Gobierno de Taiwán', anio: 2016 },
+	{ nombre: 'Premio Yo Emprendedor', entidad: 'UNITEC, Laureate University, Youth Action Net', anio: 2013 },
+];
+---
+
+<section id="premios" class="py-20 lg:py-28 bg-white">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div data-animate class="text-center mb-16">
+			<span class="text-secondary font-semibold text-sm uppercase tracking-wider">Reconocimientos</span>
+			<h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mt-3">
+				Premios que respaldan nuestro <span class="text-primary">compromiso</span>
+			</h2>
+			<p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+				A lo largo de nuestra trayectoria hemos sido reconocidos a nivel nacional e internacional.
+			</p>
+		</div>
+
+		<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+			{premios.map((premio, i) => (
+				<div data-animate data-delay={String(i * 100)} class="bg-gray-50 rounded-2xl p-6 hover:bg-white hover:shadow-lg transition-all border border-gray-100">
+					<span class="inline-block bg-primary/10 text-primary font-bold text-sm px-3 py-1 rounded-full mb-4">{premio.anio}</span>
+					<h3 class="text-lg font-bold text-gray-900 mb-2">{premio.nombre}</h3>
+					<p class="text-gray-500 text-sm">{premio.entidad}</p>
+				</div>
+			))}
+		</div>
+	</div>
+</section>

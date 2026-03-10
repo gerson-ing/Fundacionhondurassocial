@@ -1,0 +1,51 @@
+---
+const everyOrgUrl = 'https://www.every.org/fundacion-no-gubernamental-de-desarrollo-honduras-social';
+
+const cuentas = [
+	{ banco: 'Banco Atlántida', tipo: 'Lempiras', cuenta: '2010-0581-68' },
+	{ banco: 'Banco Atlántida', tipo: 'Dólares', cuenta: '2010-0581-69' },
+];
+---
+
+<section id="donaciones" class="py-20 lg:py-28 bg-primary text-white relative overflow-hidden">
+	<div class="absolute inset-0 opacity-10">
+		<div class="absolute -bottom-20 -left-20 w-80 h-80 bg-highlight rounded-full blur-3xl animate-float-slow"></div>
+	</div>
+
+	<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div data-animate class="text-center mb-12">
+			<span class="text-highlight font-semibold text-sm uppercase tracking-wider">Dona Ahora</span>
+			<h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-3">
+				Tu aporte <span class="text-highlight">transforma vidas</span>
+			</h2>
+			<p class="mt-6 text-lg text-white/70 max-w-2xl mx-auto">
+				Cada contribución nos permite seguir fortaleciendo comunidades en Honduras.
+			</p>
+		</div>
+
+		<div data-animate class="max-w-2xl mx-auto text-center">
+			<a href={everyOrgUrl} target="_blank" rel="noopener noreferrer" class="inline-block bg-highlight hover:bg-yellow-400 text-gray-900 font-bold px-10 py-4 rounded-full text-lg transition-all hover:scale-105 shadow-lg">
+				Donar por Every.org
+			</a>
+			<p class="text-white/50 text-sm mt-4">Plataforma internacional segura de recaudación de fondos</p>
+
+			<details class="mt-12 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 text-left">
+				<summary class="cursor-pointer px-6 py-4 font-semibold text-white/90 hover:text-white transition-colors">
+					Transferencia bancaria directa
+				</summary>
+				<div class="px-6 pb-6 space-y-4">
+					{cuentas.map(c => (
+						<div class="bg-white/5 rounded-xl p-4">
+							<p class="font-medium text-white/90">{c.banco}</p>
+							<p class="text-sm text-white/60">Cuenta en {c.tipo}: <span class="text-white font-mono">{c.cuenta}</span></p>
+						</div>
+					))}
+					<div class="bg-white/5 rounded-xl p-4">
+						<p class="font-medium text-white/90">Registro Internacional</p>
+						<p class="text-sm text-white/60">SAM/DUNS Tracking ID: <span class="text-white font-mono">2107264</span></p>
+					</div>
+				</div>
+			</details>
+		</div>
+	</div>
+</section>

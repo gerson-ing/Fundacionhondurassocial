@@ -1,0 +1,46 @@
+---
+const socios = [
+	{
+		nombre: 'Creative Business Cup Networks',
+		pais: 'Dinamarca',
+		desde: 2019,
+		descripcion: 'Red global de emprendimiento creativo. Honduras Social es el representante en Honduras desde 2019.',
+	},
+	{
+		nombre: 'Institute for Training and Development (ITD)',
+		pais: 'Estados Unidos',
+		desde: 2021,
+		descripcion: 'Programa Professional Fellows del Departamento de Estado de EE.UU., promoviendo el intercambio profesional internacional.',
+	},
+];
+---
+
+<section id="socios" class="py-20 lg:py-28 bg-white">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div data-animate class="text-center mb-16">
+			<span class="text-secondary font-semibold text-sm uppercase tracking-wider">Socios Internacionales</span>
+			<h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mt-3">
+				Organizaciones que <span class="text-primary">representamos</span> en Honduras
+			</h2>
+		</div>
+
+		<div class="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
+			{socios.map((socio, i) => (
+				<div data-animate data-delay={String(i * 150)} class="bg-gray-50 rounded-2xl p-8 hover:bg-white hover:shadow-lg transition-all border border-gray-100">
+					<div class="flex items-center gap-3 mb-4">
+						<div class="bg-primary/10 rounded-lg p-3">
+							<svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+							</svg>
+						</div>
+						<div>
+							<h3 class="font-bold text-gray-900">{socio.nombre}</h3>
+							<p class="text-xs text-gray-500">{socio.pais} — Desde {socio.desde}</p>
+						</div>
+					</div>
+					<p class="text-gray-600 text-sm leading-relaxed">{socio.descripcion}</p>
+				</div>
+			))}
+		</div>
+	</div>
+</section>

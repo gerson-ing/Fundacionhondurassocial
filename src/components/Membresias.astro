@@ -1,0 +1,39 @@
+---
+const membresias = [
+	{ red: 'Red Mundial de Jóvenes Emprendedores', institucion: 'Youth Action Net' },
+	{ red: 'Emprendedores Sociales de Latinoamérica', institucion: 'Viva Trust / INCAE Business School' },
+	{ red: 'Voces Vitales Honduras', institucion: 'US Embassy — Vital Voices' },
+	{ red: 'Red de Emprendedores Sociales y Agentes de Cambio', institucion: 'World Youth Academy, ONU Viena' },
+	{ red: 'Emprendedores Innovadores en Israel', institucion: 'Mashav — YABT — Golda Meir' },
+	{ red: 'Red de Juventud Internacional', institucion: 'OIJ — Organización Iberoamericana para la Juventud' },
+	{ red: 'Cámara Internacional de Emprendedores', institucion: 'CAINEM Honduras' },
+	{ red: 'Veedores Sociales', institucion: 'CNA / USAID' },
+	{ red: 'Young Leaders of the Americas Initiative', institucion: 'YLAI — Embajada Americana' },
+	{ red: 'Red Juvenil de las Américas', institucion: 'YABT, OEA, Cumbre de las Américas' },
+	{ red: 'Juventudes Líderes', institucion: 'OXFAM Internacional' },
+	{ red: 'Jóvenes Líderes por la Democracia', institucion: 'Instituto Holandés — Unión Europea' },
+];
+---
+
+<section id="membresias" class="py-20 lg:py-28 bg-warm">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div data-animate class="text-center mb-16">
+			<span class="text-secondary font-semibold text-sm uppercase tracking-wider">Redes y Membresías</span>
+			<h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mt-3">
+				Conectados con el <span class="text-primary">mundo</span>
+			</h2>
+			<p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+				Somos parte de redes internacionales que fortalecen nuestro impacto y alcance global.
+			</p>
+		</div>
+
+		<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+			{membresias.map((m, i) => (
+				<div data-animate data-delay={String(i * 80)} class="bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+					<p class="font-semibold text-gray-900 text-sm">{m.red}</p>
+					<p class="text-xs text-gray-500 mt-1">{m.institucion}</p>
+				</div>
+			))}
+		</div>
+	</div>
+</section>
