@@ -3,18 +3,29 @@ const valores = [
 	{
 		icon: '🎯',
 		titulo: 'Misión',
-		texto: 'Promover el desarrollo integral de las comunidades hondureñas a través de programas de educación, emprendimiento e inclusión social que generen oportunidades sostenibles.'
+		texto: 'Brindar e implementar nuevas estrategias para incluir socialmente y empoderar económicamente a nuestras poblaciones beneficiadas en Honduras; por medio de diferentes programas, actividades y alianzas estratégicas nacionales e internacionales.'
 	},
 	{
 		icon: '🔭',
 		titulo: 'Visión',
-		texto: 'Ser la fundación líder en transformación comunitaria en Honduras, donde cada persona tenga acceso a herramientas para construir un futuro digno y próspero.'
+		texto: 'Ser la fundación líder en Honduras que brinde nuevas oportunidades socioeconómicas a través de las conexiones y las alianzas internacionales, implementando alternativas creativas, de impacto social y ambiental para fortalecer y replicar más programas inclusivos e innovadores que potencien la educación, el voluntariado y el emprendimiento.'
 	},
 	{
 		icon: '💛',
-		titulo: 'Valores',
-		texto: 'Transparencia, solidaridad, inclusión, compromiso comunitario y respeto por la diversidad cultural de nuestro país.'
+		titulo: 'Público Meta',
+		texto: 'Jóvenes, mujeres y personas con discapacidad. También familias de escasos recursos a través de proyectos de desarrollo social.'
 	}
+];
+
+const actividades = [
+	'Entrenamientos',
+	'Talleres',
+	'Conferencias',
+	'Capacitaciones',
+	'Eventos nacionales e internacionales',
+	'Programas de mentoría e incubación para emprendedores',
+	'Actividades de Voluntariado',
+	'Actividades de Desarrollo Social'
 ];
 ---
 
@@ -23,10 +34,13 @@ const valores = [
 		<div data-animate class="text-center mb-16">
 			<span class="text-secondary font-semibold text-sm uppercase tracking-wider">Quiénes Somos</span>
 			<h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mt-3">
-				Una fundación nacida del <span class="text-primary">corazón de Honduras</span>
+				Una fundación <span class="text-primary">comprometida con Honduras</span>
 			</h2>
 			<p class="mt-6 text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-				Honduras Social nació en 2020 con la convicción de que el cambio real empieza en las comunidades. Un grupo de jóvenes profesionales decidió unir esfuerzos para llevar oportunidades educativas y de desarrollo a quienes más lo necesitan.
+				Somos una organización dedicada a fortalecer comunidades, especialmente mujeres, jóvenes, personas con discapacidad y grupos étnicos, a través del emprendimiento, la educación, el voluntariado, la cooperación internacional, y ahora también mediante programas de ambiente y salud, promoviendo el desarrollo sostenible y el bienestar comunitario.
+			</p>
+			<p class="mt-4 text-base text-gray-500 max-w-3xl mx-auto leading-relaxed">
+				Fuimos constituidos el 23 de marzo de 2018 en San Pedro Sula. Nuestro trabajo inició como un emprendimiento social desde 2011. Fundada por Karen Yesenia Madrid Morales, contamos con cobertura a nivel nacional.
 			</p>
 		</div>
 
@@ -38,6 +52,17 @@ const valores = [
 					<p class="text-gray-600 leading-relaxed">{item.texto}</p>
 				</div>
 			))}
+		</div>
+
+		<div data-animate class="mt-16">
+			<h3 class="text-xl font-bold text-gray-900 text-center mb-8">¿Qué hacemos?</h3>
+			<div class="flex flex-wrap justify-center gap-3">
+				{actividades.map(a => (
+					<span class="bg-white px-4 py-2 rounded-full text-sm font-medium text-primary shadow-sm border border-gray-100">
+						{a}
+					</span>
+				))}
+			</div>
 		</div>
 	</div>
 </section>
