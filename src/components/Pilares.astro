@@ -1,34 +1,54 @@
 ---
 const pilares = [
 	{
-		icono: `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>`,
+		numero: '01',
+		icono: `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>`,
 		titulo: 'Emprendimiento',
 		descripcion: 'Formación, capacitación, entrenamiento y vinculación para emprendedores, con programas de mentoría e incubación de negocios.',
-		color: 'bg-primary',
+		bg: 'bg-primary',
+		text: 'text-white',
+		span: 'lg:col-span-2 lg:row-span-2',
+		featured: true,
 	},
 	{
+		numero: '02',
 		icono: `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>`,
 		titulo: 'Educación y Discapacidad',
-		descripcion: 'Inclusión educativa y laboral para personas con discapacidad, promoviendo igualdad de oportunidades y acceso.',
-		color: 'bg-secondary',
+		descripcion: 'Inclusión educativa y laboral para personas con discapacidad, promoviendo igualdad de oportunidades.',
+		bg: 'bg-secondary',
+		text: 'text-white',
+		span: '',
+		featured: false,
 	},
 	{
+		numero: '03',
 		icono: `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>`,
 		titulo: 'Vinculación Internacional',
-		descripcion: 'Alianzas globales para la generación de oportunidades a través de cooperación y redes internacionales.',
-		color: 'bg-accent',
+		descripcion: 'Alianzas globales y redes internacionales de cooperación.',
+		bg: 'bg-accent',
+		text: 'text-white',
+		span: '',
+		featured: false,
 	},
 	{
+		numero: '04',
 		icono: `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" /></svg>`,
 		titulo: 'Democracia',
 		descripcion: 'Formación en liderazgo ético, valores y civismo para fortalecer la participación ciudadana.',
-		color: 'bg-peach',
+		bg: 'bg-peach',
+		text: 'text-white',
+		span: 'lg:col-span-2',
+		featured: false,
 	},
 	{
+		numero: '05',
 		icono: `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>`,
 		titulo: 'Desarrollo Social',
-		descripcion: 'Ayuda social para poblaciones vulnerables y de escasos recursos, incluyendo donaciones y asistencia comunitaria.',
-		color: 'bg-mint',
+		descripcion: 'Ayuda social para poblaciones vulnerables, donaciones y asistencia comunitaria.',
+		bg: 'bg-mint',
+		text: 'text-gray-900',
+		span: 'lg:col-span-2',
+		featured: false,
 	},
 ];
 ---
@@ -37,7 +57,7 @@ const pilares = [
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="section-header text-center mb-16">
 			<span class="text-secondary font-semibold text-sm uppercase tracking-wider">Nuestros Pilares</span>
-			<h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mt-3">
+			<h2 class="text-3xl sm:text-4xl lg:text-6xl font-extrabold text-gray-900 mt-3 tracking-tight">
 				Cinco ejes que <span class="text-primary">transforman vidas</span>
 			</h2>
 			<p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
@@ -45,14 +65,46 @@ const pilares = [
 			</p>
 		</div>
 
-		<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-			{pilares.map((pilar, i) => (
-				<div class="pilares-card gsap-hidden group relative bg-gray-50 rounded-2xl p-8 hover:bg-white hover:shadow-lg transition-all border border-gray-100">
-					<div class:list={[pilar.color, "w-16 h-16 rounded-xl flex items-center justify-center text-white mb-6"]}>
-						<Fragment set:html={pilar.icono} />
+		<div class="pilares-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[minmax(220px,auto)] gap-4 lg:gap-5">
+			{pilares.map(pilar => (
+				<div class:list={[
+					'pilares-card gsap-hidden group relative overflow-hidden rounded-3xl p-8 transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl cursor-default',
+					pilar.bg,
+					pilar.text,
+					pilar.span,
+				]}>
+					<span class:list={[
+						'absolute -top-4 -right-2 font-extrabold leading-none select-none pointer-events-none transition-transform duration-500 group-hover:scale-110',
+						pilar.featured ? 'text-[10rem] opacity-10' : 'text-[7rem] opacity-15',
+					]}>
+						{pilar.numero}
+					</span>
+
+					<div class="absolute inset-0 bg-gradient-to-br from-white/0 via-white/5 to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+
+					<div class="relative z-10 flex flex-col h-full">
+						<div class:list={[
+							'mb-6 transition-transform duration-500 group-hover:scale-110 origin-left',
+							pilar.text === 'text-white' ? 'text-white/90' : 'text-gray-900/90',
+						]}>
+							<Fragment set:html={pilar.icono} />
+						</div>
+
+						<h3 class:list={[
+							'font-extrabold mb-3 leading-tight',
+							pilar.featured ? 'text-3xl lg:text-4xl' : 'text-xl lg:text-2xl',
+						]}>
+							{pilar.titulo}
+						</h3>
+
+						<p class:list={[
+							'leading-relaxed',
+							pilar.text === 'text-white' ? 'text-white/80' : 'text-gray-700',
+							pilar.featured ? 'text-base lg:text-lg' : 'text-sm',
+						]}>
+							{pilar.descripcion}
+						</p>
 					</div>
-					<h3 class="text-xl font-bold text-gray-900 mb-3">{pilar.titulo}</h3>
-					<p class="text-gray-600 leading-relaxed text-sm">{pilar.descripcion}</p>
 				</div>
 			))}
 		</div>
