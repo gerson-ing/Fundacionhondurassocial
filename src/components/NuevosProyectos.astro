@@ -16,7 +16,30 @@ interface NuevoProyecto {
 	imagen: string;
 }
 
-const nuevosProyectos: NuevoProyecto[] = [];
+const nuevosProyectos: NuevoProyecto[] = [
+	{
+		titulo: 'Tech Five Live',
+		categoria: 'Educación',
+		descripcion: 'Conectamos a los estudiantes con las posibilidades reales de STEAM uniendo aulas con carreras y pasión con propósito. A través de eventos inmersivos, colaboraciones con la industria y aprendizaje práctico, estamos preparando a la próxima generación de innovadores, ayudando a ciudades, empresas y comunidades a construir una economía futura más fuerte e inclusiva.',
+		fechaInicio: '',
+		duracion: '2 años',
+		aliados: '',
+		meta: '2,000 jóvenes por evento',
+		estado: 'Próximamente',
+		imagen: 'https://res.cloudinary.com/dfnsygose/image/upload/v1776566520/TFdefault-logo-semiwht-277_1_qukgam.png',
+	},
+	{
+		titulo: 'NutriInnova',
+		categoria: 'Desarrollo Social',
+		descripcion: 'Nnova IA es el primer asistente de inteligencia artificial enfocado en nutrición, diseñado para familias de todas las regiones. Organización especializada en combatir la malnutrición infantil mediante tecnología innovadora (inteligencia artificial, herramientas de diagnóstico no invasivas) y educación comunitaria basada en evidencia. Opera en Honduras, Nigeria, Kenya y Mozambique.',
+		fechaInicio: '',
+		duracion: '8 meses',
+		aliados: 'Ashoka',
+		meta: '500 personas',
+		estado: 'Próximamente',
+		imagen: 'https://res.cloudinary.com/dfnsygose/image/upload/v1776568052/Proyecto_nuevo_zgaz2b.png',
+	},
+];
 
 const estadoStyles: Record<string, string> = {
 	'En planificación': 'bg-blue-100 text-blue-700',
